@@ -1,5 +1,10 @@
+import Router from "./services/Router.js";
+import Store from "./services/Store.js";
+
+window.app = {};
+app.store = Store;
+app.router = Router;
+
 window.addEventListener("DOMContentLoaded", () => {
-    let body = document.querySelector("body");
-    body.innerHTML = `
-            <h1>hello YARL!</h1>`;
+    app.router.init();
 });
